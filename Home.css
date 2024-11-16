@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    background: linear-gradient(0deg, rgb(242, 214, 236) 0%, rgb(234, 44, 94) 100%);
+    text-align: center;
+    max-width: 400px;
+    border-radius: 25px;
+    margin: auto;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: black; 
+    font-family: "Lexend Zetta", sans-serif;
+}
+
+h2{
+    color: black;
+    font-family: "Lexend Zetta", sans-serif;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.contentbox {
+    background: linear-gradient(90deg, rgb(252, 221, 216) 0%, rgb(248, 208, 153) 50%, rgb(237, 184, 111) 100%);
+    border-radius: 8px;
+    border: 1px solid #373535;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 10px 10px solid black;
+    transition: transform 0.2s , box-shadow 0.2s;
+
+}
+.contentbox:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 4px 15px black;
+}
+
+#temp{
+    border-radius: 15px;
+}
+
+button {
+    background-color: rgb(235, 36, 36);
+    color: black;
+    font-family: "Lexend Zetta", sans-serif;
+    border: 2px solid #0b0b0b;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background-color: rgb(43, 189, 43);
+    color: #f4f4f4;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(43, 189, 43, 0.5);
+    border-color: rgb(43, 189, 43);
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(43, 189, 43, 0.2);
+    border-radius: 50%;
+    transition: transform 0.5s;
+    transform: translate(-10%, -10%) scale(0);
+    z-index: 0;
+}
+
+button:hover::after {
+    transform: translate(-10%, -10%) scale(1);
+}
+
+
+input[type="range"], input[type="number"], input[type="color"] {
+    width: 100%;
+    margin-top: 10px;
+}
