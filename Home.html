@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <h1>Home Appliance Control</h1>
+        <div class="list">
+            <div class="contentbox" id="fan">
+                <h3><i class="fa-solid fa-fan"></i>  FAN</h3>
+                <button onclick="Power('fan')">ON/OFF</button>
+                <input type="range" min="0" max="5" value="3" id="speed" onchange="FanSpeed(this.value)">
+            </div>
+            <div class="contentbox" id="ac">
+                <h3><i class="fa-solid fa-wind"></i> AIR CONDITIONAR</h3>
+                
+                <button onclick="Power('ac')">ON/OFF</button>
+                <input type="number" min="16" max="30" value="20" id="temp" onchange="Temperature(this.value)">
+            </div>
+            <div class="contentbox" id="tv">
+                <h3><i class="fa-solid fa-tv"></i>  TV</h3>
+                <button onclick="Power('tv')">ON/OFF</button>
+            </div>
+            <div class="contentbox" id="lights">
+                <h3> <i class="fa-regular fa-lightbulb"></i>  LIGHTS</h3>
+                <button onclick="Power('lights')">ON/OFF</button>
+                <input type="range" min="0" max="100" value="100" id="brightness" onchange="adjustBrightness(this.value)">
+                <input type="color" id="lights-color" onchange="changeColor(this.value)">
+            </div>
+        </div>
+    </div>
+    <script src="home.js"></script>
+</body>
+</html>
